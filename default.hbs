@@ -16,8 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/nprogress.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic" />
-    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome.min.css"}}" />
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
@@ -30,6 +29,7 @@
                 <div class="site-title-wrapper">
                     {{#if @blog.logo}}
                         <a class="site-logo js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+                        <p class='site-description'>{{@blog.description}}</p>
                     {{else}}
                         <h1 class="site-title"><a class="js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}">{{@blog.title}}</a></h1>
 
@@ -63,7 +63,7 @@
                 <a class="button-square button-jump-top js-jump-top" href="#"><i class="fa fa-angle-up"></i></a>
             </div>
 
-            <p class="footer-copyright">&copy; {{date format="YYYY"}} / Published with <a href="https://ghost.org">Ghost</a> / <a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a></p>
+            <p class="footer-copyright">no-copyright {{date format="YYYY"}} / Published with <a href="https://ghost.org">Ghost</a> / <a href="https://github.com/lesion/ghostwriter">Ghostwriter theme</a></p>
         </div>
     </footer>
 
